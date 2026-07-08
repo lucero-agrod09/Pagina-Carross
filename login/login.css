@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("../images/fondo2login.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.contenedor {
+    width: 420px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,.6);
+    backdrop-filter: blur(15px);
+    transition: .4s;
+}
+
+/* iluminado*/
+.contenedor:hover {
+    border: 5px solid #0ef;
+    box-shadow:
+        0 0 20px #0ef,
+        0 0 40px rgba(0,238,255,.6),
+        inset 0 0 20px rgba(0,238,255,.6);
+}
+
+
+.formulario h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 30px;
+    transition: .4s;
+}
+
+.contenedor:hover h2 {
+    color: #0ef;
+}
+
+
+.input-contenedor {
+    position: relative;
+    margin-bottom: 22px;
+    border-bottom: 2px solid #fff;
+}
+
+.input-contenedor input {
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    padding-right: 35px;
+}
+
+/*label floane */
+.input-contenedor label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: .9rem;
+    pointer-events: none;
+    transition: .4s;
+}
+
+/* icono */
+.input-contenedor i {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+
+.input-contenedor input:focus ~ label,
+.input-contenedor input:valid ~ label {
+    top: -5px;
+    font-size: .75rem;
+    color: #0ef;
+}
+
+
+.olvidar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: .85rem;
+    margin-bottom: 22px;
+}
+
+.olvidar label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.olvidar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.olvidar a:hover {
+    color: #0ef;
+}
+
+
+button {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button:hover {
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+
+.registrar {
+    margin-top: 18px;
+    text-align: center;
+    color: #fff;
+    font-size: .85rem;
+}
+
+.link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #0ef;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .contenedor {
+        width: 90%;
+    }
+}
